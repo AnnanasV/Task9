@@ -1,4 +1,6 @@
-﻿Task task1 = Task.Run(() =>
+﻿using SavingProject;
+/*
+Task task1 = Task.Run(() =>
 {
     Console.WriteLine("Hello from task1");
 });
@@ -16,3 +18,6 @@ Task task3 = Task.Run(async () =>
 
 Task.WaitAll(task1, task2, task3);
 Console.WriteLine("after waiting");
+*/
+Save save = new Save();
+await save.DownloadDataAsync("https://www.wikipedia.org/", @"C:\Temp\TextUrl.txt"); // works only with @...
